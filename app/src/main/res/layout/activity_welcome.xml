@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WelcomeActivity">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="gradient_animated_background.json"
+            app:lottie_loop="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <!-- 圓形動畫圖像 -->
+                <FrameLayout
+                    android:id="@+id/roundAnimatedImageFrameLayout"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center">
+
+                    <com.gcssloop.widget.RCRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:round_corner="40dp">
+
+                        <ImageView
+                            android:id="@+id/colorImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/srcImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="17dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/icon_welcome_white"/>
+                    </com.gcssloop.widget.RCRelativeLayout>
+
+                    <com.jackandphantom.circularprogressbar.CircleProgressbar
+                        android:id="@+id/circleProgressbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cpb_backgroundProgressColor="#00000000"
+                        app:cpb_foregroundProgressColor="#ffffff"
+                        app:cpb_foregroundProgressWidth="10"
+                        app:cpb_progress="0"
+                        app:cpb_roundedCorner="true"
+                        app:cpb_touchEnabled="true"/>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="卡提諾論壇"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="bottom|center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ver. 1.2.5"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
